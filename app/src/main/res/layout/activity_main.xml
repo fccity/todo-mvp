@@ -16,29 +16,12 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
-
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:inputType="textPassword" />
-
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="登录" />
+            android:layout_marginTop="20dp"
+            android:text="律师列表" />
 
     </LinearLayout>
 </RelativeLayout>

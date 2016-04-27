@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/lawyer_head_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/lawyer_avata_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:backgroundImage="@mipmap/lawyer_head_default"
+                fresco:failureImage="@mipmap/lawyer_head_default"
+                fresco:failureImageScaleType="centerInside"
+                fresco:placeholderImage="@mipmap/lawyer_head_default"
+                fresco:placeholderImageScaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/lawyer_lawyer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lawyer_avata_img"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:text="" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lawyer_lawyer_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:text="" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/lawyer_lawyer_area" />
+
+        <LinearLayout
+            android:id="@+id/lawyer_prolife_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/lawyer_head_layout"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lawyer_prolife_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="35dp"
+                android:text="执业年限：" />
+
+            <TextView
+                android:id="@+id/lawyer_prolife"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lawyer_skill_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/lawyer_prolife_layout"
+            android:layout_below="@id/lawyer_prolife_layout"
+            android:orientation="horizontal"
+            android:paddingLeft="35dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/lawyer_skill_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="擅长领域：" />
+
+
+            <TextView
+                android:id="@+id/lawyer_skill_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/lawyer_skill_title"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@id/lawyer_skill_title"
+                android:singleLine="true"
+                android:text="婚姻家庭" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lawyer_orderNum_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/lawyer_prolife_layout"
+            android:layout_below="@id/lawyer_skill_layout"
+            android:orientation="horizontal"
+            android:paddingLeft="35dp"
+            android:paddingTop="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/lawyer_orderNum_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="执业证号：" />
+
+            <TextView
+                android:id="@+id/lawyer_orderNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/lawyer_orderNum_title"
+                android:text="1009" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lawyer_credential_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/lawyer_orderNum_layout"
+            android:layout_below="@id/lawyer_orderNum_layout"
+            android:orientation="horizontal"
+            android:paddingLeft="35dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/lawyer_credential_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="执业证号：" />
+
+
+            <TextView
+                android:id="@+id/lawyer_credential"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/lawyer_credential_layout"
+            android:layout_below="@id/lawyer_credential_layout"
+            android:orientation="horizontal"
+            android:paddingLeft="35dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/lawyer_evaluate_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="执业证号：" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
