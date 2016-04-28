@@ -29,10 +29,6 @@ public class LawyerListRepository implements LawyerListDataSource {
         return INSTANCE;
     }
 
-    public static void destroyInstance() {
-        INSTANCE = null;
-    }
-
     @Override
     public void getLawyerList(final @NonNull LoadLawyerListCallback callback) {
         AsyncHttpClient asyncHttpClient = new AsyncHttpClient();

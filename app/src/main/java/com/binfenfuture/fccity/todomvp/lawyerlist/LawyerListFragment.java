@@ -78,6 +78,11 @@ public class LawyerListFragment extends Fragment implements LawyerListContract.V
         initLawyerRecyclerView(lawyerListBeans);
     }
 
+    @Override
+    public void dismissLawyerList() {
+        lawyerlistRv.setVisibility(View.GONE);
+    }
+
     public void initLawyerRecyclerView(List<LawyerListBean> lawyerListBeans) {
         lawyerListAdapter = new LawyerListAdapter(lawyerListBeans);
         lawyerListAdapter.setOnItemClickListener(new EfficientAdapter.OnItemClickListener<LawyerListBean>() {

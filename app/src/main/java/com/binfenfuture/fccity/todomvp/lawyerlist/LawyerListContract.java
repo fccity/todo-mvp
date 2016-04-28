@@ -14,6 +14,7 @@ public interface LawyerListContract {
     interface View extends BaseView<Presenter> {
         void showLayerList(List<LawyerListBean> lawyerListBeans);
 
+        void dismissLawyerList();
     }
 
     interface Presenter extends BasePresenter {

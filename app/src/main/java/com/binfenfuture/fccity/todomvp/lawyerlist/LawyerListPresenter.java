@@ -42,7 +42,7 @@ public class LawyerListPresenter implements LawyerListContract.Presenter {
 
             @Override
             public void loadDataFailure() {
-
+                mLawyerListView.dismissLawyerList();
             }
         });
     }
