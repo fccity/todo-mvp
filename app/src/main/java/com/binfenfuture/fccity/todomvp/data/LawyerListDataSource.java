@@ -17,4 +17,6 @@ public interface LawyerListDataSource {
 
     void getLawyerList(@NonNull LoadLawyerListCallback callback);
 
+    void getLawyerList(String page,@NonNull LoadLawyerListCallback callback);
+
 }

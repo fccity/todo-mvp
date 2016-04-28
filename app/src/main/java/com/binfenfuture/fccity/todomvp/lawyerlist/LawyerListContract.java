@@ -17,8 +17,8 @@ public interface LawyerListContract {
     }
 
     interface Presenter extends BasePresenter {
-        void changeLawyer(String name, String changeDescription);
+        void refresh(String name, String changeDescription);
 
-        void getLawyerList(String lawyerSkill, String lawyerCity, String sortMethod);
+        List<LawyerListBean> getLawyerList(String lawyerSkill, String lawyerCity, String sortMethod);
     }
 }

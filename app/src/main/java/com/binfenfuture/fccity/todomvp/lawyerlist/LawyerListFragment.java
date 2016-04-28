@@ -28,6 +28,7 @@ public class LawyerListFragment extends Fragment implements LawyerListContract.V
     private LawyerListContract.Presenter mPresenter;
     private RecyclerView lawyerlistRv;
     private LawyerListAdapter lawyerListAdapter;
+    private View mRoot;
 
     public static LawyerListFragment newInstance() {
         return new LawyerListFragment();
@@ -48,20 +49,22 @@ public class LawyerListFragment extends Fragment implements LawyerListContract.V
         super.onActivityCreated(savedInstanceState);
     }
 
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.lawyerlist_frag, container, false);
-        lawyerlistRv = (RecyclerView) root.findViewById(R.id.lawyerlist_rv);
+        mRoot = inflater.inflate(R.layout.lawyerlist_frag, container, false);
+        initView();
+
+        return mRoot;
+    }
+
+    private void initView() {
+        lawyerlistRv = (RecyclerView) mRoot.findViewById(R.id.lawyerlist_rv);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         lawyerlistRv.setLayoutManager(linearLayoutManager);
         lawyerlistRv.setItemAnimator(new DefaultItemAnimator());
-
-        mPresenter.getLawyerList("", "", "");
-        return root;
     }
 
     @Override
@@ -80,6 +83,7 @@ public class LawyerListFragment extends Fragment implements LawyerListContract.V
         lawyerListAdapter.setOnItemClickListener(new EfficientAdapter.OnItemClickListener<LawyerListBean>() {
             @Override
             public void onItemClick(EfficientAdapter<LawyerListBean> adapter, View view, LawyerListBean object, int position) {
+
             }
 
         });

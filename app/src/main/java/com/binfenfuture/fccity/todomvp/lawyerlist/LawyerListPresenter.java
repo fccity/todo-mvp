@@ -7,6 +7,7 @@ import com.binfenfuture.fccity.todomvp.data.LawyerListBean;
 import com.binfenfuture.fccity.todomvp.data.LawyerListDataSource;
 import com.binfenfuture.fccity.todomvp.data.LawyerListRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,6 +20,8 @@ public class LawyerListPresenter implements LawyerListContract.Presenter {
 
     @NonNull
     private final LawyerListContract.View mLawyerListView;
+
+    private List<LawyerListBean> mLawyerList = new ArrayList<>();
 
     public LawyerListPresenter(@NonNull LawyerListRepository mLawyerListRepository,
                                @NonNull LawyerListContract.View mLawyerListView) {
@@ -33,6 +36,7 @@ public class LawyerListPresenter implements LawyerListContract.Presenter {
             @Override
             public void loadDataSuccess(List<LawyerListBean> beanList) {
                 Log.e("wqc", "loadSuccess");
+                mLawyerList = beanList;
                 mLawyerListView.showLayerList(beanList);
             }
 
@@ -44,12 +48,11 @@ public class LawyerListPresenter implements LawyerListContract.Presenter {
     }
 
     @Override
-    public void changeLawyer(String name, String changeDescription) {
-
+    public void refresh(String name, String changeDescription) {
     }
 
     @Override
-    public void getLawyerList(String lawyerSkill, String lawyerCity, String sortMethod) {
-
+    public List<LawyerListBean> getLawyerList(String lawyerSkill, String lawyerCity, String sortMethod) {
+        return mLawyerList;
     }
 }

@@ -60,4 +60,9 @@ public class LawyerListRepository implements LawyerListDataSource {
             }
         });
     }
+
+    @Override
+    public void getLawyerList(String page, @NonNull LoadLawyerListCallback callback) {
+
+    }
 }
